@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        stopButton.isEnabled = true
+        stopButton.isEnabled = false
         count = 0
         
         for i in 0..<5{
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     func startTimer(){
-        //0.2秒ごとに、timerupdateメソッドを呼ぶ
+        //0.2秒ごとに、timerUpdateメソッドを呼ぶ
         timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
     }
     
